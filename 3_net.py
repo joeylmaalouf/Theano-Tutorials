@@ -44,4 +44,4 @@ predict = theano.function(inputs=[X], outputs=y_x, allow_input_downcast=True)
 for i in range(100):
     for start, end in zip(range(0, len(trX), 128), range(128, len(trX), 128)):
         cost = train(trX[start:end], trY[start:end])
-    print np.mean(np.argmax(teY, axis=1) == predict(teX))
+    print(np.mean(np.argmax(teY, axis=1) == predict(teX)))
