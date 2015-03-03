@@ -24,6 +24,7 @@ def model(X, w_h, w_o):
     return pyx
 
 trX, teX, trY, teY = mnist(onehot=True)
+print(teY)
 
 X = T.fmatrix()
 Y = T.fmatrix()
