@@ -71,7 +71,7 @@ hidden_outputs = np.array([predict_hidden_out(x)[0] for x in trX])
 
 plt.hold("on")
 plt.plot(trX[:, 1], y_pred, label = "prediction")
-plt.plot(trX[:, 1], trY, 'k.', label = "data")
+plt.plot(trX[:, 1], trY, "k.", label = "data")
 
 for node_j in range(hidden_outputs.shape[1]):
 	plt.plot(trX[:, 1], hidden_outputs[:, node_j], label = "hidden node %d" % node_j)
